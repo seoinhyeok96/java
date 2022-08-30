@@ -1,0 +1,15 @@
+package for_whlie;
+
+public class yes01 {
+
+	public static void main(String[] args) {
+		int sum = 0 ;
+		int i =3 ;
+		for(i=3;i<=100;i++) {
+			sum+= i ;
+			
+		}
+		System.out.println(sum);
+	}
+
+}

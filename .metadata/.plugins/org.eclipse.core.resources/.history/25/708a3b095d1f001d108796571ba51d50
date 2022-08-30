@@ -1,0 +1,13 @@
+package sec02.exam01;
+
+public class ArraycreatBy {
+
+	public static void main(String[] args) {
+		int []Scores = {83,90,87,88,46};
+		
+		System.out.println(Scores);
+		
+
+	}
+
+}
