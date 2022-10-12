@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-// 깨진거 고쳐주셈
+// 한글 깨진거 고쳐주셈
 request.setCharacterEncoding("utf-8");
 //점수를 저장할 배열 선언
 	int [] jumsu = new int[4];
@@ -21,6 +21,24 @@ request.setCharacterEncoding("utf-8");
 	
 	double avg =average(jumsu);
 //2. 데이터 처리 average()정의
+
+	String grade = "";
+	if(95<=avg && avg<=100){
+		grade = "A+";
+	}
+	else if(90<=avg && avg<=94){
+		grade = "A";
+	}
+	else if(85<=avg && avg<=89){
+		grade = "B+";
+	}
+	else if(80<=avg && avg<=84){
+		grade = "B";
+	}
+	else{
+		grade = "F";
+	}
+
 %>
 <%! 
 	double average(int[] jumsu){
@@ -29,11 +47,13 @@ request.setCharacterEncoding("utf-8");
 		for(int i = 0; i <jumsu.length; i++){
 			sum+=jumsu[i];
 		}
-		
-		
 		avg=(double)sum/jumsu.length;
 		return avg;
-	}
+		}
+		
+		
+		
+	
 %>
 <!--  //3.데이터 출력 -->
 <div style="width:500px; border:solid 1px gray; text-align:center">
@@ -53,6 +73,7 @@ request.setCharacterEncoding("utf-8");
 </tr>
 <td>평균</td><td><%=avg%></td>
 </tr>
+<td>학점</td><td><b><%=grade%></b></td>
 </table>
 </div>
 </body>

@@ -29,7 +29,8 @@ public class Lab2Join extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
+		// 깨진 한글 찾아주기
+	    request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 
@@ -58,7 +59,9 @@ public class Lab2Join extends HttpServlet {
 		for (String h:hobby) {
 		out.print(h + " ");
 		}
-		out.print("<br>" +"좋아하는 색: <div style='width:100px;height:100px;background:" + color + "'></div>");
+		out.print("<br>" +" color: "+color+"<div style='width:100px;height:100px;background:" + color + "'></div>");
+
+		
 		out.print("남기고 싶은 말: ");
 		out.print(memo);
 

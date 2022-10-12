@@ -21,7 +21,7 @@ if((id.equals("smart")) & (pw.equals("1234"))){
     // 2. forward() 이용한 페이지 이동
     // 2-1 RequestDispatcher 객체(인스턴스) 생성
     // 2-2 forword() 메소드 호출
-    String name="고길동";
+    String name="홍길동";
     request.setAttribute("name", name);
     RequestDispatcher dispt = request.getRequestDispatcher("success.jsp");
     dispt.forward(request,response);
