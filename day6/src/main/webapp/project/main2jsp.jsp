@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>사이트 방문자 수 출력하기: </h3>
 <%
 //application 객체 정보를 얻어서 값이 존재하는 확인
 	Integer visitCnt =(Integer)application.getAttribute("visitCnt");
@@ -27,7 +26,14 @@
 
 	}
 %>
-방문자 수:<%=application.getAttribute("visitCnt") %>
+당신은<%=application.getAttribute("visitCnt") %>번째 방문자 입니다.
+<form method="post">
+<button type="button" onclick="location.href='login_form.jsp' ">로그인</button>
+<button type="button" onclick="location.href='addr_form.jsp' ">회원가입</button>
+<br>
+</form>
+
+</body>
 
 </body>
 </html>
