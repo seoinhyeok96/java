@@ -37,6 +37,15 @@
          UserDatabaseRealm to authenticate users
     -->
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
+  	<Resource name="jdbc/mysql" 
+				auth="Container" 
+				type="javax.sql.DataSource"
+				maxWaitMillis="10000"
+				username="root" 
+				password="tbrs00002b" 
+				driverClassName="com.mysql.jdbc.Driver"
+				url="jdbc:mysql://localhost:3306/mywedb"/>
+  	
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -152,7 +161,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="day5" path="/day5" reloadable="true" source="org.eclipse.jst.jee.server:day5"/><Context docBase="day6" path="/day6" reloadable="true" source="org.eclipse.jst.jee.server:day6"/></Host>
+      <Context docBase="day7" path="/day7" reloadable="true" source="org.eclipse.jst.jee.server:day7"/><Context docBase="day7_1" path="/day7_1" reloadable="true" source="org.eclipse.jst.jee.server:day7_1"/><Context docBase="day08" path="/day08" reloadable="true" source="org.eclipse.jst.jee.server:day08"/></Host>
     </Engine>
   </Service>
 </Server>

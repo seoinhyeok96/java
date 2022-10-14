@@ -26,4 +26,14 @@
     <!--
     <Manager pathname="" />
     -->
+    <Resource name="jdbc/mysql"
+auth = "Container"
+driverClassName = "com.mysql.cj.jdbc.Driver"
+url= "jdbc:mysql://127.0.0.1:3306/mywedb?serverTimezone=UTC"
+username= "root"
+password= "tbrs00002b"
+type="javax.sql.DataSource"
+maxActive="20"
+maxWait="10000"
+/>
 </Context>
